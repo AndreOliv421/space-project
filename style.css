@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.estrelas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: piscar 5s infinite alternate;
+}
+
+@keyframes piscar {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.sol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  box-shadow: 0 0 30px yellow;
+  z-index: 2;
+}
+
+.orbita {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.planeta {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.mercurio { width: 15px; height: 15px; background: gray; box-shadow: 0 0 5px #aaa; }
+.venus    { width: 20px; height: 20px; background: goldenrod; box-shadow: 0 0 5px #daa520; }
+.terra    { width: 25px; height: 25px; background: blue; box-shadow: 0 0 10px #00f; }
+.marte    { width: 20px; height: 20px; background: red; box-shadow: 0 0 5px #f00; }
+.jupiter  { width: 40px; height: 40px; background: peru; box-shadow: 0 0 10px #d2691e; }
+.saturno  { width: 35px; height: 35px; background: khaki; box-shadow: 0 0 10px #eee; border: 3px solid #ccc; }
+
+.orbita-mercurio { width: 120px; height: 120px; margin: -60px; animation: orbita 4s linear infinite; }
+.orbita-venus    { width: 160px; height: 160px; margin: -80px; animation: orbita 6s linear infinite; }
+.orbita-terra    { width: 200px; height: 200px; margin: -100px; animation: orbita 8s linear infinite; }
+.orbita-marte    { width: 240px; height: 240px; margin: -120px; animation: orbita 10s linear infinite; }
+.orbita-jupiter  { width: 300px; height: 300px; margin: -150px; animation: orbita 14s linear infinite; }
+.orbita-saturno  { width: 360px; height: 360px; margin: -180px; animation: orbita 18s linear infinite; }
+
+@keyframes orbita {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Lua */
+.orbita-lua {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -12.5px;
+  animation: orbitaLua 2s linear infinite;
+}
+
+.lua {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  background: lightgray;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ccc;
+}
+
+@keyframes orbitaLua {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
